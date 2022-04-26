@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3303761110349371196}
   - component: {fileID: 557692576681542170}
   - component: {fileID: 6367065938364341127}
+  - component: {fileID: 1898254931921485549}
+  - component: {fileID: 3659836025611401111}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 61510487540967956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 387.95224, y: 38.486168, z: 50.37}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 5522157681524958125}
   - {fileID: 2440987866401351944}
@@ -54,11 +56,41 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61510487540967956}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 4.030018
   m_Center: {x: 0.330379, y: 4.0273857, z: 0}
+--- !u!54 &1898254931921485549
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61510487540967956}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3659836025611401111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61510487540967956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1e2e9b065e2d74d99d8d780e51114b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _yPosition: 0.2
+  _rotation: {x: 0, y: 360, z: 0}
 --- !u!1001 &3918012259410537867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,11 +148,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b819f0b803e4f964089de6412cccac02, type: 3}
+--- !u!1 &3074816309936288690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2086400557561290297, guid: b819f0b803e4f964089de6412cccac02, type: 3}
+  m_PrefabInstance: {fileID: 3918012259410537867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2440987866401351944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1711283110746670211, guid: b819f0b803e4f964089de6412cccac02, type: 3}
   m_PrefabInstance: {fileID: 3918012259410537867}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &8069276515028549422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074816309936288690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.9304676, y: 6.813969, z: 7.542323}
+  m_Center: {x: -0.000007640483, y: 3.4069877, z: 0.13839264}
 --- !u!1001 &6565429994549618478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,8 +228,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b819f0b803e4f964089de6412cccac02, type: 3}
+--- !u!1 &5181802089387211031 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2086400557561290297, guid: b819f0b803e4f964089de6412cccac02, type: 3}
+  m_PrefabInstance: {fileID: 6565429994549618478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5522157681524958125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1711283110746670211, guid: b819f0b803e4f964089de6412cccac02, type: 3}
   m_PrefabInstance: {fileID: 6565429994549618478}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &3076197549729768146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5181802089387211031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.9304676, y: 6.869504, z: 7.542323}
+  m_Center: {x: -0.000000111431, y: 3.4347515, z: 0.13839257}

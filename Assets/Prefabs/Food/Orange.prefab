@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3339850459098367433}
   - component: {fileID: 7819609491567534786}
   - component: {fileID: 7279868320116424956}
+  - component: {fileID: 6473679009841092807}
+  - component: {fileID: 5789430764700315892}
   m_Layer: 0
   m_Name: Orange
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3181482214037911638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 387.956, y: 38.445, z: 49.208}
-  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_Children:
   - {fileID: 8284681062477317934}
   - {fileID: 1516534199063554307}
@@ -54,11 +56,41 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3181482214037911638}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 7.040487
   m_Center: {x: 0, y: 7.023484, z: 0}
+--- !u!54 &6473679009841092807
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181482214037911638}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5789430764700315892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181482214037911638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1e2e9b065e2d74d99d8d780e51114b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _yPosition: 0.2
+  _rotation: {x: 0, y: 360, z: 0}
 --- !u!1001 &3870337072933750035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,11 +148,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a0057971cc1fcb4cb4522d09102ae76, type: 3}
+--- !u!1 &2179776842089264057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3167768260123276970, guid: 6a0057971cc1fcb4cb4522d09102ae76, type: 3}
+  m_PrefabInstance: {fileID: 3870337072933750035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1516534199063554307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2359319812000705552, guid: 6a0057971cc1fcb4cb4522d09102ae76, type: 3}
   m_PrefabInstance: {fileID: 3870337072933750035}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &5584843740767857431
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2179776842089264057}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.042623, y: 7.4504623, z: 14.042623}
+  m_Center: {x: -0.000007744062, y: 3.788113, z: 0.000000293478}
 --- !u!1001 &5928115168525036350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,8 +228,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a0057971cc1fcb4cb4522d09102ae76, type: 3}
+--- !u!1 &8769292583666818452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3167768260123276970, guid: 6a0057971cc1fcb4cb4522d09102ae76, type: 3}
+  m_PrefabInstance: {fileID: 5928115168525036350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8284681062477317934 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2359319812000705552, guid: 6a0057971cc1fcb4cb4522d09102ae76, type: 3}
   m_PrefabInstance: {fileID: 5928115168525036350}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &8058763242100777417
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8769292583666818452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.042623, y: 7.519881, z: 14.042623}
+  m_Center: {x: 0.000007739924, y: 3.8228223, z: -0.00000028934033}
