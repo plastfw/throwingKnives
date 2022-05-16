@@ -1,20 +1,18 @@
-using System;
-using TMPro.EditorUtilities;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Character : MonoBehaviour
 {
-     [SerializeField] private GameObject _knife;
-     [SerializeField] private bool _knifeInHands;
+     [SerializeField] private GameObject _knifeInHand;
+     [SerializeField] private bool _isActiveKnife;
 
-     public Transform KnifeTransform => _knife.transform;
-
-     public event UnityAction <Vector3> Throwed;
      public event UnityAction Geted;
+     private BoxCollider _collider;
+     private Knife _currentKnife;
 
      private void Start()
      {
+          _collider = GetComponent<BoxCollider>();
           TryThrow();
      }
 
@@ -22,17 +20,20 @@ public class Character : MonoBehaviour
      {
           if (collider.TryGetComponent(out Knife knife))
           {
-               _knifeInHands = !_knifeInHands;
+               _currentKnife = knife;
+               _isActiveKnife = !_isActiveKnife;
+               _collider.enabled = false;
                TryThrow();
+               _currentKnife.Hide();
           }
      }
      
      private void TryThrow()
      {
-          if (_knifeInHands)
+          if (_isActiveKnife)
           {
                ChangeRotate();
-               _knife.SetActive(_knifeInHands);
+               _knifeInHand.SetActive(_isActiveKnife);
                Geted?.Invoke();
           }
      }
@@ -44,8 +45,8 @@ public class Character : MonoBehaviour
 
      private void Throw()
      {
-          _knifeInHands = !_knifeInHands;
-          _knife.SetActive(_knifeInHands);
-          Throwed?.Invoke(_knife.transform.position);
+          _isActiveKnife = !_isActiveKnife;
+          _knifeInHand.SetActive(_isActiveKnife);
+          _currentKnife.Show(_knifeInHand.transform.position);
      }
 }

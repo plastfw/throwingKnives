@@ -12,14 +12,14 @@ public class PlayerInput : MonoBehaviour
         _playerMover = GetComponent<Mover>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         InputHorizontalMovement();
     }
 
     private void InputHorizontalMovement()
     {
-        _horizontalValue = Input.GetAxis(Horizontal);
+        _horizontalValue = Input.GetAxisRaw(Horizontal);
 
         _playerMover.MovementLogic(_horizontalValue);
     }

@@ -13,4 +13,9 @@ public class KnifeAnimation : MonoBehaviour
         _circleRotation = (transform.DORotate(_rotation, _duration, RotateMode.FastBeyond360)
             .SetLoops(-1, LoopType.Restart).SetEase(Ease.Linear));
     }
+
+    public void Stop()
+    {
+        _circleRotation.Kill();
+    }
 }

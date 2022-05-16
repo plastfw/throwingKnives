@@ -7,8 +7,8 @@ public class FoodAnimations : MonoBehaviour
     [SerializeField] private Vector3 _rotation;
 
     private float _duration = 5;
-    private Tweener _yoyo;
-    private Tweener _twisting;
+    private Tween _yoyo;
+    private Tween _twisting;
 
     private void Start()
     {

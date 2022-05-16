@@ -6,6 +6,10 @@ using UnityEngine;
 [RequireComponent(typeof(FoodAnimations))]
 public class Food : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem _splash;
+    [SerializeField] private ParticleSystem _bigSplash;
+    [SerializeField] private ParticleSystem _point;
+    
     private Slice[] _slices = new Slice[2];
     private Quaternion _zeroRotation = Quaternion.Euler(0,0,0);
     private Rigidbody _rigidbody;
@@ -47,6 +51,10 @@ public class Food : MonoBehaviour
         
         _rigidbody.isKinematic = false;
         _collider.enabled = false;
+        
+        _splash.gameObject.SetActive(true);
+        _bigSplash.gameObject.SetActive(true);
+        _point.gameObject.SetActive(true);
 
         StartCoroutine(DeactivateKinematicAndCollider());
     }

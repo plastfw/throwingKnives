@@ -33,6 +33,5 @@ public class KnifeSpawner : MonoBehaviour
 
     private void ChangePosition()
     {
-        _knife.transform.position = _character.KnifeTransform.position;
     }
 }
