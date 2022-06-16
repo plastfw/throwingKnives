@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(BoxCollider))]
 public class Character : MonoBehaviour
 {
      [SerializeField] private GameObject _knifeInHand;
@@ -9,11 +10,12 @@ public class Character : MonoBehaviour
      public event UnityAction Geted;
      private BoxCollider _collider;
      private Knife _currentKnife;
+     private Vector3 _turn180 = new Vector3(0, 180, 0);
 
      private void Start()
      {
           _collider = GetComponent<BoxCollider>();
-          TryThrow();
+          ThrowKnife();
      }
 
      private void OnTriggerEnter(Collider collider)
@@ -23,24 +25,24 @@ public class Character : MonoBehaviour
                _currentKnife = knife;
                _isActiveKnife = !_isActiveKnife;
                _collider.enabled = false;
-               TryThrow();
+               ThrowKnife();
                _currentKnife.Hide();
           }
      }
      
-     private void TryThrow()
+     private void ThrowKnife()
      {
           if (_isActiveKnife)
           {
-               ChangeRotate();
+               TurnAround();
                _knifeInHand.SetActive(_isActiveKnife);
                Geted?.Invoke();
           }
      }
 
-     private void ChangeRotate()
+     private void TurnAround()
      {
-          gameObject.transform.Rotate(0,180,0);
+          gameObject.transform.Rotate(_turn180);
      }
 
      private void Throw()

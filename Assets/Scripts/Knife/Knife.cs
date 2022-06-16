@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(KnifeAnimation),typeof(Mover),typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class Knife : MonoBehaviour
 {
     [SerializeField] private GameObject _model;
@@ -59,7 +61,7 @@ public class Knife : MonoBehaviour
         _model.SetActive(true);
     }
 
-    public void HitTarget(GameObject target)
+    public void HitTarget(Transform target)
     {
         transform.SetParent(target.transform);
         transform.rotation = _rotationAfterHitTarget;

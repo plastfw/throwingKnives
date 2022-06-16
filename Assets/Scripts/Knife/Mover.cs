@@ -13,6 +13,7 @@ public class Mover : MonoBehaviour
     private float _horizontal;
     private Vector3 _movementHorizontal;
     private Vector3 _movementForward;
+    private float _zero = 0;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class Mover : MonoBehaviour
 
         if (GetRightToMove())
         {
-            if (transform.position.x <= _minX && value < 0 || transform.position.x >= _maxX && value > 0)
+            if (transform.position.x <= _minX && value < _zero || transform.position.x >= _maxX && value > _zero)
             {
                 _rigidbody.MovePosition(transform.position + _movementForward * Time.fixedDeltaTime);
             }

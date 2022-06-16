@@ -7,6 +7,7 @@ public class Retry : MonoBehaviour
     [SerializeField] private Manager manager;
     
     private Button _restartButton;
+    private int _first = 1;
 
     private void OnEnable()
     {
@@ -17,6 +18,6 @@ public class Retry : MonoBehaviour
     private void OnRestartButtonClick()
     {
         manager.DisableAllScreens();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(_first);
     }
 }

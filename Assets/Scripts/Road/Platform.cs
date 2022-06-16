@@ -14,7 +14,12 @@ public class Platform : MonoBehaviour
 
     public Transform EndPoint => _endPoint;
     public Transform StartPoint => _startPoint;
-
+    
+    public virtual void PutCharacter(int number)
+    {
+        Character character = Instantiate(_character,_container);
+        character.transform.position = _wallPoints[number].transform.position;
+    }
 
     private void Start()
     {
@@ -42,16 +47,10 @@ public class Platform : MonoBehaviour
             wall.transform.position = _wallPoints[i].transform.position;
         }
     }
-
-    public virtual void PutCharacter(int number)
-    {
-        Character character = Instantiate(_character,_container);
-        character.transform.position = _wallPoints[number].transform.position;
-    }
-
+    
     private void GenerateFruit()
     {
-        int random = Random.Range(0, 3);
+        int random = Random.Range(0, _fruitPoints.Length);
 
         Fruits friuts = Instantiate(_fruits[random],_container);
         friuts.transform.position = _fruitPoints[random].transform.position;

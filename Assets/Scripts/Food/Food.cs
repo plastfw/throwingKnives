@@ -7,7 +7,6 @@ using UnityEngine;
 public class Food : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _splash;
-    [SerializeField] private ParticleSystem _bigSplash;
     [SerializeField] private ParticleSystem _point;
     
     private Slice[] _slices = new Slice[2];
@@ -25,7 +24,7 @@ public class Food : MonoBehaviour
 
     private void Update()
     {
-        CheckVisibility();
+        DisableVisibility();
     }
 
 
@@ -53,13 +52,12 @@ public class Food : MonoBehaviour
         _collider.enabled = false;
         
         _splash.gameObject.SetActive(true);
-        _bigSplash.gameObject.SetActive(true);
         _point.gameObject.SetActive(true);
 
         StartCoroutine(DeactivateKinematicAndCollider());
     }
     
-    private void CheckVisibility()
+    private void DisableVisibility()
     {
         if (gameObject.transform.position.y <= _underPath)
         {
@@ -70,15 +68,19 @@ public class Food : MonoBehaviour
     private IEnumerator DeactivateKinematicAndCollider()
     {
         var halfMilliSeconds = new WaitForSeconds(0.05f);
-
-        _slices[0].SetKinematicFalse();
-        _slices[1].SetKinematicFalse();
-
-         yield return halfMilliSeconds;
         
-        _slices[0].DeactivateCollider();
-        _slices[1].DeactivateCollider();
+        for (int i = 0; i < _slices.Length; i++)
+        {
+            _slices[i].SetKinematicFalse();
+        }
 
+        yield return halfMilliSeconds;
+        
+        for (int i = 0; i < _slices.Length; i++)
+        {
+            _slices[i].DeactivateCollider();
+        }
+        
         yield return null;
     }
 }

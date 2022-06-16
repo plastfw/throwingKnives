@@ -9,6 +9,7 @@ public class Target : MonoBehaviour
     private Player _player;
     
     public event UnityAction TouchedTarget;
+    
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.TryGetComponent(out Knife knife))
@@ -23,7 +24,7 @@ public class Target : MonoBehaviour
                 player.MultiplyPoints(_multiplier);
             }
             _knife = knife;
-            _knife.HitTarget(gameObject);
+            _knife.HitTarget(transform);
             TouchedTarget?.Invoke();
         }
     }

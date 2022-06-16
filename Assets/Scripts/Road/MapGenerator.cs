@@ -13,7 +13,6 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private Vector3 _firstCharacterPositions;
     
     private List<Platform> _poolPlatforms = new List<Platform>();
-
     private Platform _lastSpawned;
     private Platform _first;
 

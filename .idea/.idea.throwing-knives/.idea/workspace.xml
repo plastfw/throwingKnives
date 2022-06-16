@@ -24,7 +24,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dude/CharacterAnimations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Food/Slice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Finish/ShootingTarget/TargetAnimation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Knife/KnifeSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Knife/KnifeAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Knife/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Food/FoodAnimations.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,14 +48,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Теst/Car.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraMover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Tracker.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Knife/KnifeSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Dude/Character.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/LookCameraX.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Map/Wall.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Knife/PlayerInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Knife/KnifeAnimation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Knife/Mover.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Food/Food.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Map/FinishPlatform.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Map/PropsGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Map/MapGenerator.cs" />
@@ -68,13 +63,21 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Finish/ShootingTarget/TargetAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/restart.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI Manager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Retry.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Finish/ShootingTarget/Target.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Manager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/LookCamera.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Knife/Knife.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/FinishScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dude/Character.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Finish/Finishline.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Finish/ScorePlatform.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Food/Food.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Knife/Knife.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Finish/ShootingTarget/Target.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Knife/KnifeSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Knife/Mover.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Retry.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Road/MapGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Road/Platform.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Manager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27mbiyd50I6mcRduXkFBHLoOLCg" />
@@ -143,6 +146,11 @@
       <workItem from="1652265891771" duration="4559000" />
       <workItem from="1652527837152" duration="12279000" />
       <workItem from="1652702616226" duration="2088000" />
+      <workItem from="1653641200171" duration="1871000" />
+      <workItem from="1653986060416" duration="807000" />
+      <workItem from="1654161286929" duration="907000" />
+      <workItem from="1654192438736" duration="3000" />
+      <workItem from="1655370925323" duration="1973000" />
     </task>
     <servers />
   </component>
