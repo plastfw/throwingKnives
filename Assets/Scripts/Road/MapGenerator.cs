@@ -7,9 +7,10 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private Platform _firstPlatform;
     [SerializeField] private Platform _platform;
     [SerializeField] private FinishPlatform _finish;
+    [Space(30)]
     [SerializeField] private Character _character;
     [SerializeField] private GameObject _pool;
-    [SerializeField] private int _lenght;
+    [Range(2,10)][SerializeField] private int _lenght;
     [SerializeField] private Vector3 _firstCharacterPositions;
     
     private List<Platform> _poolPlatforms = new List<Platform>();
@@ -51,15 +52,14 @@ public class MapGenerator : MonoBehaviour
 
     private bool TryGetPlatform(out Platform result)
     {
-        result = _poolPlatforms.First(p => p.gameObject.activeSelf == false);
+        result = _poolPlatforms.FirstOrDefault(p => p.gameObject.activeSelf == false);
         return result != null;
     }
 
     private void CreateFirstPlatform()
     {
         _first = _firstPlatform;
-        Instantiate(_first,_pool.transform);
-        _first.transform.position = transform.position;
+        Instantiate(_first, _pool.transform.position, Quaternion.identity, _pool.transform);
         _lastSpawned = _first;
     }
 

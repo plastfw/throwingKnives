@@ -7,10 +7,11 @@ public class Character : MonoBehaviour
      [SerializeField] private GameObject _knifeInHand;
      [SerializeField] private bool _isActiveKnife;
 
-     public event UnityAction Geted;
      private BoxCollider _collider;
      private Knife _currentKnife;
      private Vector3 _turn180 = new Vector3(0, 180, 0);
+
+     public event UnityAction Geted;
 
      private void Start()
      {
@@ -22,12 +23,17 @@ public class Character : MonoBehaviour
      {
           if (collider.TryGetComponent(out Knife knife))
           {
-               _currentKnife = knife;
-               _isActiveKnife = !_isActiveKnife;
-               _collider.enabled = false;
-               ThrowKnife();
-               _currentKnife.Hide();
+               ChangeState(knife);
           }
+     }
+
+     private void ChangeState(Knife knife)
+     {
+          _currentKnife = knife;
+          _isActiveKnife = !_isActiveKnife;
+          _collider.enabled = false;
+          ThrowKnife();
+          _currentKnife.Hide();
      }
      
      private void ThrowKnife()

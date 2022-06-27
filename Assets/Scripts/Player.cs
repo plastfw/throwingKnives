@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -25,6 +26,9 @@ public class Player : MonoBehaviour
 
     public void MultiplyPoints(int multiplier)
     {
+        if (multiplier <= 0)
+            throw new InvalidOperationException(nameof(multiplier));
+        
         _multiplier = multiplier;
         _totalScore = _multiplier * _score;
     }

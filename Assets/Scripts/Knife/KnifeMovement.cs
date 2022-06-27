@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class Mover : MonoBehaviour
+public class KnifeMovement : MonoBehaviour
 {
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _horizontalSpeed;
@@ -26,7 +26,7 @@ public class Mover : MonoBehaviour
         _movementHorizontal = new Vector3(_horizontal * _horizontalSpeed, 0, _speed);
         _movementForward = new Vector3(0, 0, _speed);
 
-        if (GetRightToMove())
+        if (IsAbleToMove())
         {
             if (transform.position.x <= _minX && value < _zero || transform.position.x >= _maxX && value > _zero)
             {
@@ -45,11 +45,8 @@ public class Mover : MonoBehaviour
         _horizontalSpeed = 0;
     }
     
-    private bool GetRightToMove()
-    {
-        if (_model.activeSelf == false)
-            return false;
-        
-        return true;
+    private bool IsAbleToMove()
+    { 
+        return _model.activeSelf;
     }
 }

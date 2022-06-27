@@ -28,7 +28,7 @@ public class FinishScreen : MonoBehaviour
 
     private void SetTotalText()
     {
-        _totalScoreText.text = Convert.ToString(_totalScore);
+        _totalScoreText.text.ToString();
     }
 
     private void ShootСonfetti()

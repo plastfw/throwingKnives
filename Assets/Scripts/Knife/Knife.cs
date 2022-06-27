@@ -1,31 +1,34 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
-[RequireComponent(typeof(KnifeAnimation),typeof(Mover),typeof(Rigidbody))]
+[RequireComponent(typeof(KnifeAnimation))]
+[RequireComponent(typeof(KnifeMovement))]
+[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))]
 public class Knife : MonoBehaviour
 {
+    
+    [SerializeField] private ParticleSystem _trail;
+    [SerializeField] private ParticleSystem _sparks;
     [SerializeField] private GameObject _model;
-    [SerializeField] private GameObject _trail;
-    [SerializeField] private GameObject _sparks;
 
-    private int _crashPower = 100;
     private KnifeAnimation _animation;
+    private int _crashPower = 100;
     private Rigidbody _rigidbody;
-    private Mover _mover;
+    private KnifeMovement _knifeMovement;
     private Collider _collider;
     private Quaternion _rotationAfterThrow = Quaternion.Euler(90, 0, 0);
     private Quaternion _rotationAfterHitTarget = Quaternion.Euler(180, 0, 180);
 
-    public event UnityAction GotPoint;
-    public event UnityAction PointsReseted;
-    public event UnityAction Crashed;
-    public event UnityAction HitedTarget;
+    public event Action GotPoint;
+    public event Action PointsReseted;
+    public event Action Crashed;
+    public event Action HitedTarget;
 
     private void Start()
     {
         _animation = GetComponent<KnifeAnimation>();
-        _mover = GetComponent<Mover>();
+        _knifeMovement = GetComponent<KnifeMovement>();
         _rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<BoxCollider>();
     }
@@ -36,7 +39,7 @@ public class Knife : MonoBehaviour
         {
             Crash();
             PointsReseted?.Invoke();
-            _sparks.SetActive(true);
+            _sparks.gameObject.SetActive(true);
         }
 
         if (collider.TryGetComponent(out Food food))
@@ -48,14 +51,17 @@ public class Knife : MonoBehaviour
     public void Hide()
     {
         _collider.enabled = false;
-        _trail.SetActive(false);
+        _trail.gameObject.SetActive(false);
         _model.SetActive(false);
     }
 
     public void Show(Vector3 position)
     {
+        if (position == null)
+            throw new InvalidOperationException(nameof(position));
+        
         _collider.enabled = true;
-        _trail.SetActive(true);
+        _trail.gameObject.SetActive(true);
         transform.position = position;
         transform.rotation = _rotationAfterThrow;
         _model.SetActive(true);
@@ -63,20 +69,23 @@ public class Knife : MonoBehaviour
 
     public void HitTarget(Transform target)
     {
+        if (target == null)
+            throw new InvalidOperationException(nameof(target));
+        
         transform.SetParent(target.transform);
         transform.rotation = _rotationAfterHitTarget;
-        _mover.StopMoving();
+        _knifeMovement.StopMoving();
         _animation.Stop();
         HitedTarget?.Invoke();
     }
 
     private void Crash()
     {
-        _trail.SetActive(false);
+        _trail.gameObject.SetActive(false);
         _animation.Stop();
         _collider.isTrigger = false;
         _rigidbody.useGravity = true;
-        _mover.StopMoving();
+        _knifeMovement.StopMoving();
         _rigidbody.AddForce(Vector3.back * _crashPower);
         Crashed?.Invoke();
     }

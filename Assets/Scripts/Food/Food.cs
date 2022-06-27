@@ -31,9 +31,7 @@ public class Food : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.TryGetComponent(out Knife knife))
-        {
             Cut();
-        }
     }
 
     private void GetSlices()
@@ -46,7 +44,7 @@ public class Food : MonoBehaviour
 
     private void Cut()
     {
-        gameObject.transform.rotation = _zeroRotation;
+        transform.rotation = _zeroRotation;
         
         _rigidbody.isKinematic = false;
         _collider.enabled = false;
@@ -59,7 +57,7 @@ public class Food : MonoBehaviour
     
     private void DisableVisibility()
     {
-        if (gameObject.transform.position.y <= _underPath)
+        if (transform.position.y <= _underPath)
         {
             gameObject.SetActive(false);
         }
@@ -80,7 +78,5 @@ public class Food : MonoBehaviour
         {
             _slices[i].DeactivateCollider();
         }
-        
-        yield return null;
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Manager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     [SerializeField] private Knife _knife;
     [SerializeField] private Canvas _retryScreen;

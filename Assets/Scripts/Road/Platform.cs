@@ -10,7 +10,7 @@ public class Platform : MonoBehaviour
     [SerializeField] private Wall _wall;
     [SerializeField] private Fruits[] _fruits;
     [SerializeField] private Transform _container;
-    [SerializeField] private  Character _character;
+    [SerializeField] private Character _character;
 
     public Transform EndPoint => _endPoint;
     public Transform StartPoint => _startPoint;
@@ -37,7 +37,7 @@ public class Platform : MonoBehaviour
         {
             if (i == random)
             {
-                i++;
+                continue;
             }
             if (random == _wallPoints.Length - 1)
             {

@@ -6,7 +6,6 @@ public class PropsGenerator : MonoBehaviour
 {
     [SerializeField] private List<Transform> _transforms;
     [SerializeField] private List<GameObject> _props;
-    [SerializeField] private GameObject _container;
 
     private GameObject _prop;
 

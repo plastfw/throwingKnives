@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    private Mover _playerMover;
+    private KnifeMovement _playerKnifeMovement;
     private float _horizontalValue;
     
     private const string Horizontal = "Horizontal";
 
     private void Start()
     {
-        _playerMover = GetComponent<Mover>();
+        _playerKnifeMovement = GetComponent<KnifeMovement>();
     }
 
     private void FixedUpdate()
@@ -21,6 +21,6 @@ public class PlayerInput : MonoBehaviour
     {
         _horizontalValue = Input.GetAxisRaw(Horizontal);
 
-        _playerMover.MovementLogic(_horizontalValue);
+        _playerKnifeMovement.MovementLogic(_horizontalValue);
     }
 }

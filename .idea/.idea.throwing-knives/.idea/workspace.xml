@@ -20,7 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Retry.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Manager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dude/CharacterAnimations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Food/Slice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Finish/ShootingTarget/TargetAnimation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,27 +57,29 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Map/MapGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Map/LowGroundPlane.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Food/FoodAnimations.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Road/PropsGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Finish/xPlatform.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Finish/ShootingTarget/ShootingTargetAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Finish/ShootingTarget/TargetAnimation.cs" />
       <option value="$PROJECT_DIR$/Assets/restart.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UI Manager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camera/LookCamera.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/FinishScreen.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Dude/Character.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Finish/Finishline.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Finish/ScorePlatform.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Food/Food.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Knife/Knife.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Finish/ShootingTarget/Target.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Knife/KnifeSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Knife/Mover.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Manager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dude/Character.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/FinishScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Retry.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Road/MapGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Road/Platform.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Manager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Road/PropsGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Knife/KnifeMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Food/Food.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Knife/Knife.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="27mbiyd50I6mcRduXkFBHLoOLCg" />
@@ -91,7 +93,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -151,6 +153,9 @@
       <workItem from="1654161286929" duration="907000" />
       <workItem from="1654192438736" duration="3000" />
       <workItem from="1655370925323" duration="1973000" />
+      <workItem from="1656166212497" duration="1625000" />
+      <workItem from="1656168785782" duration="440000" />
+      <workItem from="1656329449731" duration="4303000" />
     </task>
     <servers />
   </component>

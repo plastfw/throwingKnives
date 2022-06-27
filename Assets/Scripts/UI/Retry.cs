@@ -2,12 +2,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class Retry : MonoBehaviour
 {
-    [SerializeField] private Manager manager;
+    private const int _sceneIndex = 1;
+    
+    [SerializeField] private UIManager uiManager;
     
     private Button _restartButton;
-    private int _first = 1;
 
     private void OnEnable()
     {
@@ -17,7 +19,7 @@ public class Retry : MonoBehaviour
 
     private void OnRestartButtonClick()
     {
-        manager.DisableAllScreens();
-        SceneManager.LoadScene(_first);
+        uiManager.DisableAllScreens();
+        SceneManager.LoadScene(_sceneIndex);
     }
 }
