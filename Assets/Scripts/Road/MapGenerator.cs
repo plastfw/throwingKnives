@@ -8,7 +8,7 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private Platform _platform;
     [SerializeField] private FinishPlatform _finish;
     [Space(30)]
-    [SerializeField] private Character _character;
+    [SerializeField] private DudeWithKnife dudeWithKnife;
     [SerializeField] private GameObject _pool;
     [Range(2,10)][SerializeField] private int _lenght;
     [SerializeField] private Vector3 _firstCharacterPositions;
@@ -72,7 +72,7 @@ public class MapGenerator : MonoBehaviour
 
     private void PutCharacter()
     {
-        Character character = Instantiate(_character);
-        character.transform.position = _firstCharacterPositions;
+        DudeWithKnife dudeWithKnife = Instantiate(this.dudeWithKnife);
+        dudeWithKnife.transform.position = _firstCharacterPositions;
     }
 }

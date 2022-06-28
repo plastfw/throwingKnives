@@ -1,8 +1,8 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider))]
-public class Character : MonoBehaviour
+public class DudeWithKnife : MonoBehaviour
 {
      [SerializeField] private GameObject _knifeInHand;
      [SerializeField] private bool _isActiveKnife;
@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
      private Knife _currentKnife;
      private Vector3 _turn180 = new Vector3(0, 180, 0);
 
-     public event UnityAction Geted;
+     public event Action Geted;
 
      private void Start()
      {
@@ -23,11 +23,11 @@ public class Character : MonoBehaviour
      {
           if (collider.TryGetComponent(out Knife knife))
           {
-               ChangeState(knife);
+               TakeAnotherKnife(knife);
           }
      }
 
-     private void ChangeState(Knife knife)
+     private void TakeAnotherKnife(Knife knife)
      {
           _currentKnife = knife;
           _isActiveKnife = !_isActiveKnife;

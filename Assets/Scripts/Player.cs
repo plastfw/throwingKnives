@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     public void MultiplyPoints(int multiplier)
     {
         if (multiplier <= 0)
-            throw new InvalidOperationException(nameof(multiplier));
+            throw new ArgumentOutOfRangeException(nameof(multiplier),"The multiplier is equal to or less than 0");
         
         _multiplier = multiplier;
         _totalScore = _multiplier * _score;

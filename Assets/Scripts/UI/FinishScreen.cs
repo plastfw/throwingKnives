@@ -8,7 +8,7 @@ public class FinishScreen : MonoBehaviour
     [SerializeField] private Text _totalScoreText;
     [SerializeField] private Player _player;
     [SerializeField] private Knife _knife;
-    [SerializeField] private GameObject _confetti;
+    [SerializeField] private ParticleSystem _confetti;
 
     private int _totalScore;
 
@@ -33,6 +33,6 @@ public class FinishScreen : MonoBehaviour
 
     private void ShootСonfetti()
     {
-        _confetti.SetActive(true);
+        _confetti.gameObject.SetActive(true);
     }
 }

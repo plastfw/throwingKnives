@@ -5,7 +5,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class Retry : MonoBehaviour
 {
-    private const int _sceneIndex = 1;
+    private const int SceneIndex = 1;
     
     [SerializeField] private UIManager uiManager;
     
@@ -20,6 +20,6 @@ public class Retry : MonoBehaviour
     private void OnRestartButtonClick()
     {
         uiManager.DisableAllScreens();
-        SceneManager.LoadScene(_sceneIndex);
+        SceneManager.LoadScene(SceneIndex);
     }
 }

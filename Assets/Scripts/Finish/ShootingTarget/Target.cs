@@ -1,5 +1,5 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Target : MonoBehaviour
 {
@@ -8,7 +8,7 @@ public class Target : MonoBehaviour
     private Knife _knife;
     private Player _player;
     
-    public event UnityAction TouchedTarget;
+    public event Action TouchedTarget;
     
     private void OnTriggerEnter(Collider collider)
     {
@@ -23,6 +23,7 @@ public class Target : MonoBehaviour
             {
                 player.MultiplyPoints(_multiplier);
             }
+            
             _knife = knife;
             _knife.HitTarget(transform);
             TouchedTarget?.Invoke();

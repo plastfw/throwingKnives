@@ -7,7 +7,6 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class Knife : MonoBehaviour
 {
-    
     [SerializeField] private ParticleSystem _trail;
     [SerializeField] private ParticleSystem _sparks;
     [SerializeField] private GameObject _model;
@@ -58,7 +57,7 @@ public class Knife : MonoBehaviour
     public void Show(Vector3 position)
     {
         if (position == null)
-            throw new InvalidOperationException(nameof(position));
+            throw new NullReferenceException (nameof(position));
         
         _collider.enabled = true;
         _trail.gameObject.SetActive(true);

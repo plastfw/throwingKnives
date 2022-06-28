@@ -1,5 +1,3 @@
 using UnityEngine;
 
-public class Fruits : MonoBehaviour
-{
-}
+public class Fruits : MonoBehaviour {}

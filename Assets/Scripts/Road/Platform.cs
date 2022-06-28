@@ -10,15 +10,15 @@ public class Platform : MonoBehaviour
     [SerializeField] private Wall _wall;
     [SerializeField] private Fruits[] _fruits;
     [SerializeField] private Transform _container;
-    [SerializeField] private Character _character;
+    [SerializeField] private DudeWithKnife dudeWithKnife;
 
     public Transform EndPoint => _endPoint;
     public Transform StartPoint => _startPoint;
     
-    public virtual void PutCharacter(int number)
+    public virtual void PutDude(int number)
     {
-        Character character = Instantiate(_character,_container);
-        character.transform.position = _wallPoints[number].transform.position;
+        var dudeWithKnife = Instantiate(this.dudeWithKnife,_container);
+        dudeWithKnife.transform.position = _wallPoints[number].transform.position;
     }
 
     private void Start()
@@ -31,7 +31,7 @@ public class Platform : MonoBehaviour
     {
         int random =  Random.Range(0, _wallPoints.Length-1);
 
-        PutCharacter(random);
+        PutDude(random);
         
         for (int i = 0; i < _wallPoints.Length; i++)
         {
@@ -43,7 +43,8 @@ public class Platform : MonoBehaviour
             {
                 break;
             }
-            Wall wall = Instantiate(_wall,_container);
+            
+            var wall = Instantiate(_wall,_container);
             wall.transform.position = _wallPoints[i].transform.position;
         }
     }
@@ -52,7 +53,7 @@ public class Platform : MonoBehaviour
     {
         int random = Random.Range(0, _fruitPoints.Length);
 
-        Fruits friuts = Instantiate(_fruits[random],_container);
-        friuts.transform.position = _fruitPoints[random].transform.position;
+        Fruits fruits = Instantiate(_fruits[random],_container);
+        fruits.transform.position = _fruitPoints[random].transform.position;
     }
 }

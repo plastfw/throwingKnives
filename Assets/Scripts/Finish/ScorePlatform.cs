@@ -1,5 +1,3 @@
 using UnityEngine;
 
-public class ScorePlatform : MonoBehaviour
-{
-}
+public class ScorePlatform : MonoBehaviour {}

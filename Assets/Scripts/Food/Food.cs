@@ -38,7 +38,8 @@ public class Food : MonoBehaviour
     {
         for (int i = 0; i < _slices.Length; i++)
         {
-            _slices[i] = transform.GetChild(i).GetComponent<Slice>();
+            if(transform.GetChild(i).TryGetComponent(out Slice slice)) 
+                _slices[i] = slice;
         }
     }
 

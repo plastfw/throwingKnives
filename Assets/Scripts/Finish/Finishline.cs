@@ -1,5 +1,3 @@
 using UnityEngine;
 
-public class Finishline : MonoBehaviour
-{
-}
+public class Finishline : MonoBehaviour { }
