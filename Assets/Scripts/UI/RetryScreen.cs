@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class Retry : MonoBehaviour
+public class RetryScreen : MonoBehaviour
 {
-    private const int SceneIndex = 1;
+    private const int SceneIndex = 0;
     
     [SerializeField] private UIManager uiManager;
     

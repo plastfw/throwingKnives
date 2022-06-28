@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class FinishScreen : MonoBehaviour
     [SerializeField] private Text _totalScoreText;
     [SerializeField] private Player _player;
     [SerializeField] private Knife _knife;
-    [SerializeField] private ParticleSystem _confetti;
+    [SerializeField] private List<ParticleSystem> _confetti;
 
     private int _totalScore;
 
@@ -33,6 +34,9 @@ public class FinishScreen : MonoBehaviour
 
     private void ShootСonfetti()
     {
-        _confetti.gameObject.SetActive(true);
+        foreach (var confetti in _confetti)
+        {
+            confetti.gameObject.SetActive(true);
+        }
     }
 }

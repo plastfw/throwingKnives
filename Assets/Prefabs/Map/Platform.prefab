@@ -178,7 +178,6 @@ MonoBehaviour:
   - {fileID: 4127962502344880968, guid: ca0d1d7807108bb40877497e4e500827, type: 3}
   - {fileID: 1970002167908258981, guid: 224e91c6b25dc5a4bb9f3665da9cac01, type: 3}
   - {fileID: 4869969061166989860, guid: 5051f11af0c66094fbb940f6589b61a9, type: 3}
-  _container: {fileID: 5174141507365952568}
 --- !u!1 &875838508807537051
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +686,7 @@ MonoBehaviour:
   - {fileID: 2361775628878240483, guid: fb7b701883abed249a6c8a589a585157, type: 3}
   - {fileID: 7353323537176748848, guid: 73e6406f5213d024eae53582d70a5226, type: 3}
   _container: {fileID: 1461468897424929059}
-  _character: {fileID: 2736343610042774918, guid: 57264b58e27b5f84f8b19b34fc60b064, type: 3}
+  dudeWithKnife: {fileID: 4294820393587669282, guid: a0ce24cc09b73314a8640a56c39ae7b8, type: 3}
 --- !u!65 &3695601878745967424
 BoxCollider:
   m_ObjectHideFlags: 0
